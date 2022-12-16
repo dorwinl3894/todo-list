@@ -7,6 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  mode: "development",
   module: {
     rules: [
       {
@@ -22,10 +23,5 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Todo List',
-    }),
-  ],
+  }
 };

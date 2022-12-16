@@ -1,0 +1,5 @@
+const inboxBackend = () => {
+
+}
+
+export {inboxBackend};
