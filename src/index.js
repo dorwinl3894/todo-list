@@ -10,3 +10,5 @@ createTask();
 closeTask();
 //finishes task by sliding it up
 finishTask();
+
+//make tasks transparent or crossed out after checkmark is pressed

@@ -14,7 +14,6 @@ console.log("hiii");
 
 const createTask = () => {
     btn_add_task.addEventListener('click', () => {
-        console.log("ClickeD btan!");
         addTaskPopup.style.top = '3rem';
     })
 }
@@ -27,9 +26,9 @@ const closeTask = () => {
 
 const finishTask = () => {
     new_task_create.addEventListener('click', () => {
-        console.log("Clicked Create Task Butfwafwafwaton");
         addTaskPopup.style.top = '-35rem';
         addTask();
+
         deleteInputsFromTask();
     })
 }

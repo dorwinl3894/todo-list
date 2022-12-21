@@ -5,27 +5,11 @@ const new_task_duedate = document.getElementById('new-task-duedate');
 const new_task_create = document.getElementById('new-task-create');
 //radios
 const radioButtons = document.querySelectorAll(`input[name="priority-level"]`);
+const new_task_prio_low = document.getElementById('new-task-prio-low');
+const new_task_prio_mid = document.getElementById('new-task-prio-med');
+const new_task_prio_high = document.getElementById('new-task-prio-high');
 
-const findSelectedPriority = () => {
-    new_task_create.addEventListener('click', () => {
-        let selectedPriority;
-        for (const radioButton of radioButtons) {
-            if (radioButton.checked) {
-                selectedPriority = radioButton.value;
-                return selectedPriority;
-            }
-        }
-        if (selectedPriority === 'low') {
-            priority.classList.add('prio-low')
-        }
-        if (selectedPriority === 'medium') {
-            priority.classList.add('prio-med')
-        }
-        if (selectedPriority === 'high') {
-            priority.classList.add('prio-high')
-        }
-    })
-}
+
 const addTask = () => {
     const divTask = document.createElement('div');
     divTask.classList.add('task');
@@ -44,7 +28,12 @@ const addTask = () => {
     //priority
     const priority = document.createElement('div');
     priority.classList.add('priority');
-    findSelectedPriority();
+    for (const radioButton of radioButtons) {
+        if (radioButton.checked) {
+            priority.id = radioButton.id;
+        }
+    }
+    //findSelectedPriority();
 
     //calendar date
     const dueDate = document.createElement('p');
@@ -67,5 +56,26 @@ const addTask = () => {
 
     rightColumn.appendChild(divTask);
 }
+//problem
+// 
+/* new_task_create.addEventListener('click', () => {
+    console.log("Yooo");
+    let selectedPriority;
+    for (const radioButton of radioButtons) {
+        if (radioButton.checked) {
+            selectedPriority = radioButton.id;
+        }
+    }
+    if (selectedPriority === 'new-task-prio-low') {
+        priority.classList.add('prio-low')
+    }
+    if (selectedPriority === 'new-task-prio-med') {
+        priority.classList.add('prio-med')
+    }
+    if (selectedPriority === 'new-task-prio-high') {
+        priority.classList.add('prio-high')
+    }
+
+}) */
 
 export {addTask};

@@ -160,9 +160,9 @@ details:hover {
     height: 20px;
     border-radius: 100px;
 }
-.prio-low { background-color: green; }
-.prio-med { background-color: yellow;}
-.prio-high { background-color: red; }
+#new-task-prio-low { background-color: green; }
+#new-task-prio-med { background-color: yellow;}
+#new-task-prio-high { background-color: red; }
 
 .addTaskPopup {
     position: absolute;
